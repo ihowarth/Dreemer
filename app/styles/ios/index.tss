@@ -1,0 +1,46 @@
+"#mainWin" : {
+	orientationModes : [ Ti.UI.PORTRAIT ]
+},
+
+
+"#navBar" : {
+	top				: Alloy.Globals.styleSizes.viewTop,
+	height 			: Alloy.Globals.styleSizes.navBarHeight,
+	backgroundColor : "#97999a"
+},
+
+"#profileButton" : {
+	bottom : 5,
+	left   : 10,
+	height : 30,
+	width  : 30,
+	backgroundColor : "#ff0000"
+},
+
+"#titleLabel" : {
+	bottom : 10,
+	color  : "#fff",
+	font   : {
+		fontSize   : 18,
+		fontFamily : Alloy.Globals.fonts.regularFont
+	},
+	text   : "Everyone's Dreams"	
+},
+
+"#postButton" : {
+	bottom : 5,
+	right  : 10,
+	height : 30,
+	width  : 30,
+	backgroundColor : "#0000ff"
+},
+
+
+"#dreemsTable" : {	
+	top    			: Alloy.Globals.styleSizes.navBarHeight,	
+	bottom 			: 0,
+	left   			: 0,
+	right  			: 0,
+	separatorColor  : "#4a4a50",
+	backgroundColor : "#4a4a50"
+}

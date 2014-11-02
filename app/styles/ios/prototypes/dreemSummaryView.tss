@@ -1,0 +1,69 @@
+"#topLevelRow" : {
+	top 		   : 4,
+	selectionStyle :  Ti.UI.iPhone.TableViewCellSelectionStyle.NONE
+},
+
+"#container" : {
+	top				: 0,
+	width			: "92%",
+	height			: 130,
+	borderRadius    : 3,
+	backgroundColor : "#fff"
+},
+
+"Label" : {
+	font 		 : {
+		fontFamily : Alloy.Globals.fonts.lightFont
+	},
+	touchEnabled : false
+},
+
+
+"#titleLabel" : {
+	top    : 10,
+	left   : 20,
+	right  : 50,
+	height : 50,
+	font   : {
+		fontSize : 17
+	},
+	color  : "#555"
+},
+
+"#twitterInfoContainer" : {
+	left   		 : 20,
+	bottom 		 : 10,
+	width  		 : Ti.UI.SIZE,
+	height 		 : Ti.UI.SIZE,
+	layout 	     : "horizontal",
+	touchEnabled : false
+},
+"#userTwitterIcon" : {
+	height			: 30,
+	width			: 30,
+	backgroundColor : "#00ff00",
+	touchEnabled    : false
+},
+"#twitterInfoLabelsContainer" : {
+	left   		 : 15,
+	width  		 : Ti.UI.SIZE,
+	height 		 : Ti.UI.SIZE,
+	layout 		 : "vertical",
+	touchEnabled : false
+},
+"#twitterHandleLabel" : {
+	left  : 0,
+	width : 200,
+	font  : {
+		fontSize : 17
+	},
+	color : "#666"
+},
+"#locationLabel" : {
+	left  : 0,
+	font  : {
+		fontSize : 12
+	},
+	width : 200,
+	color : "#999"
+}

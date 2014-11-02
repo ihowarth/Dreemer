@@ -1,0 +1,18 @@
+<Alloy>
+	<View id="containerView">
+		<View id="twitterInfoContainerView">
+			<ImageView id="usersTwitterIcon"/>
+			<Label id="twitterHandleLabel"/>
+		</View>
+		<ScrollView id="dreamContainerScrollView">
+			<TextArea id="dreamTitleTextArea"/>
+			<View id="separatorLine"/>
+			<Label id="dreamQuestionLabel"/>
+			<TextArea id="imagineTextArea"/>
+		</ScrollView>
+		<ImageView id="closeButton"/>
+		<View id="postButton">
+			<Label id="postButtonLabel"/>
+		</View>
+	</View>
+</Alloy>

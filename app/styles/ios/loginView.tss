@@ -1,0 +1,101 @@
+"#containerView" : {
+	height  : Ti.UI.FILL,
+	width   : Ti.UI.FILL,
+	opacity : 0 
+},
+
+"#backgroundImage" : {
+	height 		       : Ti.UI.FILL,
+	width  		 	   : Ti.UI.FILL,
+	touchEnabled 	   : false,
+	backgroundGradient : {
+        type       : 'linear',
+        startPoint : { x : "0%"   , y : "0%"   },
+        endPoint   : { x : "100%" , y : "100%" },
+        colors     : [{ color : "#3634b4" , offset: 0 }, { color : "#c644fc" , offset : 1 }],
+    }
+},
+
+
+"Label" : {
+	left		 : 20,
+	font 		 : {
+		fontFamily : Alloy.Globals.fonts.lightFont 
+	},
+	textAlign    : Ti.UI.TEXT_ALIGNMENT_LEFT,
+	touchEnabled : false
+},
+
+
+"#elementsContainer" : {
+	top    : 150,
+	layout : "vertical"
+},
+
+
+"#youAreLabel" : {
+	font  : {
+		fontSize   : 20
+	},
+	color : " #fff",
+	text  : "You are a"
+},
+"#dreemerLabel" : {
+	font  : {
+		fontSize   : 50
+	},
+	color : " #ddd",
+	text  : "Dreemer"
+},
+"#butLabel" : {
+	font  : {
+		fontSize   : 24
+	},
+	color : " #fff",
+	text  : "but you're not\nthe only one."
+},
+
+
+"#twitterConnectContainer" : {
+	top    : 20,
+	width  : Ti.UI.SIZE,
+	height : Ti.UI.SIZE
+},
+"#twitterConnectStrip" : {
+	width  			: Ti.UI.FILL,
+	height 			: 60,
+	backgroundColor : "#000",
+	opacity         : 0.2,
+	touchEnabled    : false	
+},
+
+"#horizontalTwitterContainer" : {
+	left   : 0,
+	width  : Ti.UI.SIZE,
+	height : Ti.UI.SIZE,
+	layout : "horizontal" 
+},
+"#twitterConnectLabel" : {
+	font  : {
+		fontSize : 16
+	},
+	color : "#fff",
+	text  : "Connect to Twitter"
+},
+"#twitterIcon" : {
+	left		 : 10,
+	width  		 : Ti.UI.SIZE,
+	height 		 : Ti.UI.SIZE,
+	touchEnabled : false,
+	image		 : "/TwitterIcon.png"
+},
+
+
+"#skipLoginLabel" : {
+	top   : 15,
+	font  : {
+		fontSize   : 14
+	},
+	color : "#bbb",
+	text  : "No account? No problem!\nSwipe right to see\nwhat people are dreaming of"
+}

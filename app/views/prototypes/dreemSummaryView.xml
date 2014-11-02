@@ -1,0 +1,14 @@
+<Alloy>
+	<TableViewRow id="topLevelRow">
+		<View id="container">
+			<Label id="titleLabel"/>
+			<View id="twitterInfoContainer">
+				<ImageView id="userTwitterIcon"/>
+				<View id="twitterInfoLabelsContainer">
+					<Label id="twitterHandleLabel"/>
+					<Label id="locationLabel"/>
+				</View>
+			</View>
+		</View>
+	</TableViewRow>
+</Alloy>

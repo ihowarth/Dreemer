@@ -1,0 +1,105 @@
+"#containerView" : {
+	backgroundColor : "#fff",
+	opacity 		: 0
+},
+
+"#twitterInfoContainerView" : {
+	top    		 : 25,
+	left   		 : 20,
+	touchEnabled : false,
+	layout 		 : "horizontal"
+},
+"#usersTwitterIcon" : {
+	height 		 : 30,
+	width  		 : 30,
+	touchEnabled : false,
+	backgroundColor : "#0000ff"
+},
+"#twitterHandleLabel" : {
+	left  		 : 10,
+	width 		 : 200,
+	font  		 : {
+		fontSize   : 16,
+		fontFamily : Alloy.Globals.fonts.lightFont
+	},
+	color 		 : "#222",
+	touchEnabled : false,
+	text  		 : "@davidzendoval"
+},
+
+
+"#closeButton" : {
+	top    : 30,
+	right  : 20,
+	height : 20,
+	width  : 20, 
+	backgroundColor : "#ff0000"
+},
+
+
+"#dreamContainerScrollView" : {
+	left   : 20,
+	top    : 80,
+	bottom : 60,
+	width  : "90%",
+	layout : "vertical"
+},
+"#dreamTitleTextArea" : {
+	left       : 0,
+	width      : Ti.UI.FILL,
+	height     : Ti.UI.SIZE,
+	font       : {
+		fontSize   : 24,
+		fontFamily : Alloy.Globals.fonts.lightFont
+	},
+	maxLength  : 100,
+	scrollable : false,
+	color      : "#aaa",
+	value      : "Dream title..."
+},
+"#separatorLine" : {
+	left   			 : 0,
+	top    			 : 20,
+	height 			 : 1,
+	width  			 : Ti.UI.FILL,
+	backgroundColor  : "#666"
+},
+"#dreamQuestionLabel" : {
+	left      : 5,
+	font      : {
+		fontSize   : 14,
+		fontFamily : Alloy.Globals.fonts.lightFont
+	},
+	textAlign : Ti.UI.TEXT_ALIGNMENT_LEFT,
+	color     : "#666", 
+	text      : "What is your dream about?"
+},
+"#imagineTextArea" : {
+	left      : 0,
+	top       : 15,
+	width  	  : Ti.UI.FILL,
+	height 	  : Ti.UI.SIZE,
+	font   	  : {
+		fontSize   : 18,
+		fontFamily : Alloy.Globals.fonts.lightFont
+	},
+	maxLength : 500,
+	color     : "#aaa",
+	value     : "Imagine..."
+},
+
+
+"#postButton" : {
+	bottom 			: 0,
+	height 			: 60,
+	backgroundColor : "#eee"	
+},
+"#postButtonLabel" : {
+	font  		 : {
+		fontSize   : 17,
+		fontFamily : Alloy.Globals.fonts.regularFont
+	},
+	color 		 : "#666",
+	touchEnabled : false,
+	text  		 : "Post Dream",
+}

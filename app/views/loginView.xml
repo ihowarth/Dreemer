@@ -1,0 +1,18 @@
+d<Alloy>
+	<View id="containerView">
+		<ImageView id="backgroundImage"/>
+		<View id="elementsContainer">
+			<Label id="youAreLabel"/>
+			<Label id="dreemerLabel"/>
+			<Label id="butLabel"/>
+			<View id="twitterConnectContainer">
+				<View id="twitterConnectStrip"/>
+				<View id="horizontalTwitterContainer">
+					<Label id="twitterConnectLabel"/>
+					<ImageView id="twitterIcon"/>
+				</View>
+			</View>
+			<Label id="skipLoginLabel"/>
+		</View>
+	</View>
+</Alloy>

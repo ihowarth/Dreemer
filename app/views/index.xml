@@ -1,0 +1,10 @@
+<Alloy>
+	<Window id="mainWin">
+		<View id="navBar">
+			<ImageView id="profileButton"/>
+			<Label id="titleLabel"/>
+			<ImageView id="postButton"/>
+		</View>
+		<TableView id="dreemsTable"/>
+	</Window>
+</Alloy>

@@ -11,7 +11,7 @@ var args = arguments[0] || {};
     // If the mainWin isn't open; open it, else; animate the loginView in
     if ( args && args.isWinOpen == false ) {
         $.containerView.opacity = 1;
-        args.openMainWin();
+        args.openMainWin(); 
         
     } else {
         $.containerView.animate({ opacity : 1 , duration : 600 });    

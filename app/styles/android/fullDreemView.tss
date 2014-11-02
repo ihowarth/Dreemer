@@ -1,0 +1,117 @@
+"#containerView" : {
+	backgroundColor : "#fff",
+	opacity 		: 0
+},
+
+"Label" : {
+	font 	  : {
+		fontFamily : Alloy.Globals.fonts.lightFont
+	},
+	textAlign : Ti.UI.TEXT_ALIGNMENT_LEFT,
+},
+
+"#closeButton" : {
+	top    : 30,
+	right  : 20,
+	height : 22,
+	width  : 22, 
+	backgroundColor : "#ff0000"
+},
+
+"#dreemContainer" : {
+	top    	   : 60,
+	bottom 	   : 70,
+	width  	   : "92%",
+	scrollType : "vertical",
+	layout 	   : "vertical"
+},
+
+"#titleAndEndorseContainer" : {
+	height : Ti.UI.SIZE
+},
+"#titleLabel" : {
+	top   		 : 0,
+	left  		 : 0,
+	width 		 : 200,
+	touchEnabled : false,
+	font  		 : {
+		fontSize : 24
+	},
+	color 		 : "#666"
+},
+"#endorseContainer" : {
+	right  : 0,
+	top    : 20,
+	height : Ti.UI.SIZE,
+	width  : Ti.UI.SIZE,
+	layout : "vertical"
+},
+"#endorseButton" : {
+	touchEnabled : false,
+	width : 30,
+	height : 30,
+	backgroundColor : "#0000ff"
+},
+"#endorseLabel" : {
+	touchEnabled : false,
+	font 		 : {
+		fontSize : 11
+	},
+	color		 : "#000",
+	text 		 : "endorse"
+},
+
+"#amountOfEndorsersLabel" : {
+	left  		 : 0,
+	top   		 : 10,
+	touchEnabled : false,
+	font  		 : {
+		fontSize : 11
+	},
+	color 		 : "#000"
+},
+"#fullDreemLabel" : {
+	left  		 : 0,
+	top   		 : 15,
+	touchEnabled : false,
+	font  	     : {
+		fontSize : 16
+	},
+	color 		 : "#888"
+},
+
+"#twitterDetailsContainer" : {
+	bottom			: 0,
+	height 			: 70,
+	backgroundColor : "#eee"
+},
+"#twitterIcon" : {
+	left			: 20,
+	height			: 30,
+	width			: 30,
+	touchEnabled    : false,
+	backgroundColor : "#00ff00"
+},
+"#twitterInfoLabelsContainer" : {
+	left   : 60,
+	width  : Ti.UI.SIZE,
+	height : Ti.UI.SIZE,
+	layout : "vertical",
+},
+"#twitterHandleLabel" : {
+	left  : 0,
+	width : 200,
+	font  : {
+		fontSize : 18
+	},
+	color : "#444"
+},
+"#twitterLocationLabel" : {
+	left  		 : 0,
+	touchEnabled : false,
+	font  		 : {
+		fontSize : 12
+	},
+	width 		 : 200,
+	color 		 : "#444"
+}

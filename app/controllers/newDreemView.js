@@ -1,5 +1,12 @@
 var args = arguments[0] || {};
 
+/*
+ * Initialisation functions - only executed once
+ * 
+ * init
+ * addEventListeners
+ */
+
 (function init() {
     if ( OS_IOS ) {
         args.changeStatusBarColor();    
@@ -16,6 +23,11 @@ function addEventListeners() {
     $.closeButton.addEventListener( "click" , function() {
         $.containerView.animate({ opacity : 0 , duration : 600 } , args.closeNewDreemView );
     });   
+    $.containerView.addEventListener( "swipe" , function( e ) {
+        if ( e.direction == "right" ) {
+            $.containerView.animate({ opacity : 0 , duration : 600 } , args.closeNewDreemView );
+        }
+    });
     
     // Handle the focusing and bluring of the title textArea, as we have to do the hint text manually in textAreas because of iOS
     function removeTitleHintText() {

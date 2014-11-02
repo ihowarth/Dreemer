@@ -34,10 +34,11 @@
 
 
 "#dreemsTable" : {	
-	top    			: 44,	
-	bottom 			: 0,
-	left   			: 0,
-	right  			: 0,
-	separatorColor  : "#4a4a50",
-	backgroundColor : "#4a4a50"
+	top    						: 44,	
+	bottom 						: 0,
+	left   						: 0,
+	right  						: 0,
+	showVerticalScrollIndicator : false,
+	separatorColor  			: "#4a4a50",
+	backgroundColor 			: "#4a4a50"
 }

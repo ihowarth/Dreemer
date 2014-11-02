@@ -20,7 +20,7 @@
 
 
 "#titleLabel" : {
-	top    : 10,
+	top    : 5,
 	left   : 20,
 	right  : 50,
 	height : 50,

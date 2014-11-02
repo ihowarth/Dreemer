@@ -33,9 +33,34 @@ function addEventListeners() {
     });
     
     $.dreemsTable.addEventListener( "click" , function( e ) {
-        console.log(JSON.stringify(e.source));
-        
-        // TODO: Open full dreem
+        // TODO: Pass correct data to full dreem
+        var fullDreemView = Alloy.createController( "fullDreemView" , {
+            // Used to remove the newDreenView from inside itself, after fading it out nicely. We're also changing the iOS status bar color here
+            closeFullDreemView   : function() {
+                if ( OS_IOS ) {
+                    // Change status bar black
+                    $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK;
+                }
+                    
+                $.mainWin.remove( fullDreemView );
+            },
+            changeStatusBarColor : function() {
+                // Change status bar white
+                $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.DEFAULT;
+            }
+        }).getView();
+            
+        $.mainWin.add( fullDreemView );
+    });
+    
+    $.mainWin.addEventListener( "swipe" , function( e ){
+        //If left; show random dreem, else; open newDreamView
+        if ( e.direction == "left" ) {
+            
+            
+        } else {
+            
+        }
     });
     
     $.profileButton.addEventListener( "click" , function() {

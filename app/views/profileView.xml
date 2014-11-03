@@ -1,0 +1,19 @@
+<Alloy>
+	<View id="containerView">
+	    <View id="navBarView">
+	        <ImageView id="backButton"/>
+	        <Label id="navBarLabel"/>
+	    </View>
+	    <View id="backgroundView"/>
+	    <View id="profileInfoContainer">
+	        <ImageView id="twitterProfileImage"/>
+	        <Label id="twitterHandleLabel"/>
+	        <Label id="locationLabel"/>
+	        <View id="userStatsContainer">
+	           <ImageView id="endorsersImageView"/>
+	           <Label id="amountOfEndorsersLabel"/>
+	        </View>
+	    </View>
+	    <!--How to handle this part? Table view or prototpyes?-->
+	</View>
+</Alloy>

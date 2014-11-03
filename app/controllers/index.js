@@ -35,7 +35,7 @@ function addEventListeners() {
     $.dreemsTable.addEventListener( "click" , function( e ) {
         // TODO: Pass correct data to full dreem
         var fullDreemView = Alloy.createController( "fullDreemView" , {
-            // Used to remove the newDreenView from inside itself, after fading it out nicely. We're also changing the iOS status bar color here
+            // Used to remove the fulldREEMView from inside itself, after fading it out nicely. We're also changing the iOS status bar color here
             closeFullDreemView   : function() {
                 if ( OS_IOS ) {
                     // Change status bar black
@@ -65,11 +65,19 @@ function addEventListeners() {
     
     $.profileButton.addEventListener( "click" , function() {
         // If the user is not logged in; open loginView, else; open the user's profile
-        if ( !APP.loggedIn ) {
+        // TODO: !APP.loggedIn
+        if ( false ) {
             openLoginView();
             
         } else {
-            // TODO: Open profile
+	        var profileView = Alloy.createController( "profileView" , {
+	            // Used to remove the profileView from inside itself, after fading it out nicely. We're also changing the iOS status bar color here
+	            closeProfileView   : function() {
+	                $.mainWin.remove( profileView );
+	            }
+	        }).getView();
+	            
+	        $.mainWin.add( profileView );
         }
     });
     

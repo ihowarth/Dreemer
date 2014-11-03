@@ -1,6 +1,6 @@
 <Alloy>
 	<Window id="mainWin">
-		<View id="navBar">
+		<View id="navBarView">
 			<ImageView id="profileButton"/>
 			<Label id="titleLabel"/>
 			<ImageView id="postButton"/>

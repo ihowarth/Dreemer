@@ -3,9 +3,9 @@
 },
 
 
-"#navBar" : {
-	top				: Alloy.Globals.styleSizes.viewTop,
-	height 			: Alloy.Globals.styleSizes.navBarHeight,
+"#navBarView" : {
+    top             : 0,
+	height 			: 64,
 	backgroundColor : "#97999a"
 },
 
@@ -37,7 +37,7 @@
 
 
 "#dreemsTable" : {	
-	top    			: Alloy.Globals.styleSizes.navBarHeight,	
+	top    			: 64,	
 	bottom 			: 0,
 	left   			: 0,
 	right  			: 0,

@@ -14,7 +14,7 @@ var args = arguments[0] || {};
     
     $.containerView.animate({ opacity : 1 , duration : 600 });
     
-    setupData();
+    setData();
        
     addEventListeners();   
 })();
@@ -39,10 +39,10 @@ function addEventListeners() {
 /*
  * Main functions
  * 
- * setupData
+ * setData
  */
 
-function setupData() {
+function setData() {
     // TODO: change these for the real details
     $.titleLabel.text = "An app to share your dreams with the world, and so much more";
     

@@ -1,5 +1,5 @@
 <Alloy>
-	<TableViewRow id="topLevelRow">
+	<TableViewRow id="rowContainer">
 		<View id="container">
 			<Label id="titleLabel"/>
 			<View id="twitterInfoContainer">

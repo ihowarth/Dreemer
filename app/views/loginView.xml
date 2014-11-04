@@ -1,6 +1,6 @@
 d<Alloy>
 	<View id="containerView">
-		<ImageView id="backgroundImage"/>
+		<View id="backgroundGradient"/>
 		<View id="elementsContainer">
 			<Label id="youAreLabel"/>
 			<Label id="dreemerLabel"/>

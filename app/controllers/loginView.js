@@ -9,12 +9,8 @@ var args = arguments[0] || {};
 
 (function init() {
     // If the mainWin isn't open; open it, else; animate the loginView in
-    if ( args && args.isWinOpen == false ) {
-        $.containerView.opacity = 1;
-        args.openMainWin(); 
-        
-    } else {
-        $.containerView.animate({ opacity : 1 , duration : 600 });    
+    if ( args.isWinOpen == true ) {
+		$.containerView.animate({ opacity : 1 , duration : 600 });    	
     }
     
     addEventListeners();   
@@ -32,3 +28,15 @@ function addEventListeners() {
         }  
     });
 }
+
+
+/*
+ * Exported functions
+ */
+
+// Used to set the opacity before adding it to the mainWin, so we can fade in nicely
+function setViewOpacity0() {
+	$.containerView.opacity = 0;
+}
+
+exports.setViewOpacity0 = setViewOpacity0;

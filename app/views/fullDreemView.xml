@@ -1,9 +1,9 @@
 <Alloy>
 	<View id="containerView">
-		<ScrollView id="dreemContainer">
-			<Label id="titleLabel"/>		
-			<Label id="amountOfEndorsersLabel"/>
-			<Label id="fullDreemLabel"/>
+	   	<ScrollView id="dreemContainer">
+    			<Label id="titleLabel"/>		
+    			<Label id="amountOfEndorsersLabel"/>
+    			<Label id="fullDreemLabel"/>
 		</ScrollView>
 		<View id="bottomBarView">
 			<View id="twitterDetailsContainer">

@@ -8,11 +8,7 @@ var args = arguments[0] || {};
  */
 
 (function init() {
-    if ( OS_IOS ) {
-        args.changeStatusBarColorBlack();    
-    }
-    
-    $.containerView.animate({ top : 0 , bottom : 0 , duration : 300 });    
+    $.containerView.animate({ top : 0 , bottom : 0 , duration : 300 } , args.changeStatusBarColorBlack );    
     
     addEventListeners();   
 })();
@@ -74,11 +70,11 @@ function addEventListeners() {
 
 function closeNewDreemView() {
     if ( OS_IOS ) {
-        args.changeStatusBarColorWhite();
-        
+    	args.changeStatusBarColorWhite();
+    	
     } else {
-        args.mainWin.addEventListener( "androidback" , closeNewDreemView );
+   		args.mainWin.removeEventListener( "androidback" , closeNewDreemView );
     }
     
-    $.containerView.animate({ top : Alloy.Globals.deviceMeasurements.height , bottom : Alloy.Globals.deviceMeasurements.minusHeight , duration : 300 } , args.closeNewDreemView );
+    $.containerView.animate({ top : Alloy.Globals.deviceMeasurements.height , bottom : Alloy.Globals.deviceMeasurements.minusHeight , duration : 300 });
 }

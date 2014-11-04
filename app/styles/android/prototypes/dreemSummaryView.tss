@@ -1,10 +1,11 @@
-"#topLevelRow" : {
+"#rowContainer" : {
 	height : 134,
 },
 
 "#container" : {
 	top				: 0,
-	width			: "92%",
+    left            : 15,
+    right           : 15,
 	height			: 130,
 	borderRadius    : 3,
 	backgroundColor : "#fff"

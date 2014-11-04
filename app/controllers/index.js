@@ -66,7 +66,7 @@ function addEventListeners() {
     $.profileButton.addEventListener( "click" , function() {
         // If the user is not logged in; open loginView, else; open the user's profile
         // TODO: !APP.loggedIn
-        if ( false ) {
+        if ( true ) {
             openLoginView();
             
         } else {
@@ -90,13 +90,16 @@ function addEventListeners() {
                 closeNewDreemView       : function() {
                     $.mainWin.remove( newDreemView );
                 },
+                // Needs an iOS check because it's used as a callback
                 changeStatusBarColorBlack : function() {
-                    // Change status bar black
-                    $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.DEFAULT;  
+                	if ( OS_IOS ) {
+                		// Change status bar black	
+                    	$.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.DEFAULT;	
+                	}
                 },
                 changeStatusBarColorWhite : function() {
-                    // Change status bar white
-                    $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK;
+                	// Change status bar white
+                    $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK;	
                 },
                 mainWin : $.mainWin
             }).getView();
@@ -117,19 +120,28 @@ function addEventListeners() {
  */
 
 function openLoginView() {
-    var loginView = Alloy.createController( "loginView" , {
+    var loginController = Alloy.createController( "loginView" , {
         // Done to remove the loginView elegantly inside the controller
         closeLoginView : function() {
             $.mainWin.remove( loginView );
         },
-        openMainWin    : function() {
-            $.mainWin.open();
-        },
         isWinOpen      : isWinOpen
-    }).getView();
+    });
+    
+    var loginView = loginController.getView();
+    
+    // Used to set the opacity to 0, so we can fade in nicely. This is necessary becasue 
+    // we need the opacity to be 1 normally, so we don't get a flicker if the login page is opened first
+    if ( isWinOpen == true ) {
+    	loginController.setViewOpacity0();
+    }
     
     // Added separately using a variable so I can also use that reference to remove the view
     $.mainWin.add( loginView );
+    
+    if ( isWinOpen == false ) {
+    	$.mainWin.open();
+    }
 }
 
 

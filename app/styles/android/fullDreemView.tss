@@ -13,9 +13,9 @@
 "#dreemContainer" : {
 	top    	     : 10,
 	bottom 	     : 70,
-	width  	     : "92%",
+    left         : 15,
+    right        : 15,
 	scrollType   : "vertical",
-	touchEnabled : false,
 	layout 	     : "vertical"
 },
 "#titleLabel" : {

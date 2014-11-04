@@ -1,10 +1,9 @@
 "#containerView" : {
-	height  : Ti.UI.FILL,
-	width   : Ti.UI.FILL,
-	opacity : 0 
+	height : Ti.UI.FILL,
+	width  : Ti.UI.FILL
 },
 
-"#backgroundImage" : {
+"#backgroundGradient" : {
 	height 		       : Ti.UI.FILL,
 	width  		 	   : Ti.UI.FILL,
 	touchEnabled 	   : false,

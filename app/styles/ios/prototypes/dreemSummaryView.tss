@@ -1,11 +1,12 @@
-"#topLevelRow" : {
+"#rowContainer" : {
 	top 		   : 4,
 	selectionStyle :  Ti.UI.iPhone.TableViewCellSelectionStyle.NONE
 },
 
 "#container" : {
 	top				: 0,
-	width			: "92%",
+	left            : 15,
+    right           : 15,
 	height			: 130,
 	borderRadius    : 3,
 	backgroundColor : "#fff"

@@ -1,6 +1,6 @@
 "#containerView" : {
 	backgroundColor : "#fff",
-	opacity 		: 0
+	opacity			: 0
 },
 
 "Label" : {
@@ -10,55 +10,23 @@
 	textAlign : Ti.UI.TEXT_ALIGNMENT_LEFT,
 },
 
-"#closeButton" : {
-	top    : 30,
-	right  : 20,
-	height : 22,
-	width  : 22, 
-	backgroundColor : "#ff0000"
-},
-
 "#dreemContainer" : {
-	top    	   : 60,
+	top    	   : 0,
 	bottom 	   : 70,
 	width  	   : "92%",
 	scrollType : "vertical",
+	touchEnabled : false,
 	layout 	   : "vertical"
 },
 
-"#titleAndEndorseContainer" : {
-	height : Ti.UI.SIZE
-},
 "#titleLabel" : {
 	top   		 : 0,
 	left  		 : 0,
-	width 		 : 200,
 	touchEnabled : false,
 	font  		 : {
 		fontSize : 24
 	},
 	color 		 : "#666"
-},
-"#endorseContainer" : {
-	right  : 0,
-	top    : 20,
-	height : Ti.UI.SIZE,
-	width  : Ti.UI.SIZE,
-	layout : "vertical"
-},
-"#endorseButton" : {
-	touchEnabled : false,
-	width : 30,
-	height : 30,
-	backgroundColor : "#0000ff"
-},
-"#endorseLabel" : {
-	touchEnabled : false,
-	font 		 : {
-		fontSize : 11
-	},
-	color		 : "#000",
-	text 		 : "endorse"
 },
 
 "#amountOfEndorsersLabel" : {
@@ -80,31 +48,38 @@
 	color 		 : "#888"
 },
 
-"#twitterDetailsContainer" : {
+"#bottomBarView" : {
 	bottom			: 0,
 	height 			: 70,
 	backgroundColor : "#eee"
 },
+"#twitterDetailsContainer" : {
+	left   : 15,
+	width  : Ti.UI.SIZE,
+	height : Ti.UI.SIZE,
+	layout : "horizontal"
+},
 "#twitterIcon" : {
-	left			: 20,
 	height			: 30,
 	width			: 30,
 	touchEnabled    : false,
 	backgroundColor : "#00ff00"
 },
 "#twitterInfoLabelsContainer" : {
-	left   : 60,
-	width  : Ti.UI.SIZE,
-	height : Ti.UI.SIZE,
-	layout : "vertical",
+	left   		 : 10,
+	width  		 : Ti.UI.SIZE,
+	height 		 : Ti.UI.SIZE,
+	touchEnabled : false,
+	layout 		 : "vertical",
 },
 "#twitterHandleLabel" : {
-	left  : 0,
-	width : 200,
-	font  : {
+	left  		 : 0,
+	width 		 : 200,
+	touchEnabled : false,
+	font  		 : {
 		fontSize : 18
 	},
-	color : "#444"
+	color 		 : "#444"
 },
 "#twitterLocationLabel" : {
 	left  		 : 0,
@@ -114,4 +89,24 @@
 	},
 	width 		 : 200,
 	color 		 : "#444"
+},
+"#endorseContainer" : {
+	right  : 15,
+	height : Ti.UI.SIZE,
+	width  : Ti.UI.SIZE,
+	layout : "vertical"
+},
+"#endorseButton" : {
+	touchEnabled : false,
+	width : 30,
+	height : 30,
+	backgroundColor : "#0000ff"
+},
+"#endorseLabel" : {
+	touchEnabled : false,
+	font 		 : {
+		fontSize : 13
+	},
+	color		 : "#000",
+	text 		 : "endorse dreem"
 }

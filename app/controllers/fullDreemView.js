@@ -20,12 +20,15 @@ var args = arguments[0] || {};
 })();
 
 function addEventListeners() {
-    $.closeButton.addEventListener( "click" , function() {
-        $.containerView.animate({ opacity : 0 , duration : 600 } , args.closeFullDreemView );
-    });
+    // On Android, close the dreem view when the back button is pressed
+    if ( OS_ANDROID ) {
+        args.mainWin.addEventListener( "androidback" , closeFullDreemView );
+    }
+    
+    // Also, we can swpie right to close the view
     $.containerView.addEventListener( "swipe" , function( e ) {
         if ( e.direction == "right" ) {
-          $.containerView.animate({ opacity : 0 , duration : 600 } , args.closeFullDreemView );  
+            closeFullDreemView();
         } 
     });
     
@@ -33,14 +36,25 @@ function addEventListeners() {
         // TODO: Make endorsment call
         alert( "Endorse" );
     });
+    
+    $.twitterDetailsContainer.addEventListener( "click" , function() {
+        // TODO: Open users profuile
+        alert( "Open user profile" );
+    });
 }
 
 
 /*
  * Main functions
  * 
+ * closeFullDreemView
  * setData
  */
+
+function closeFullDreemView() {
+    args.mainWin.removeEventListener( "androidback" , closeFullDreemView );
+    $.containerView.animate({ opacity : 0 , duration : 600 } , args.closeFullDreemView );
+}
 
 function setData() {
     // TODO: change these for the real details

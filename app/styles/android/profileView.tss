@@ -1,4 +1,74 @@
+"#containerView" : {
+    backgroundColor : "#fff",
+    opacity         : 0  
+},
 
-".container" : {
-  
+"Label" : {
+    font : {
+        fontFamily : Alloy.Globals.fonts.lightFont 
+    } 
+},
+
+"#navBarView" : {
+    top             : 0,
+    height          : 64,
+    backgroundColor : "#97999a"
+},
+"#backButton" : {
+    left   : 15,
+    bottom : 5,
+    width  : 30,
+    height : 30,
+    backgroundColor : "#ff0000"
+},
+"#navBarLabel" : {
+    bottom : 10,
+    font   : {
+        fontSize : 18
+    },
+    text   : "Profile"
+},
+
+"#backgroundView" : {
+    top            : 64,
+    height         : 200,
+    backgroundGradient : {
+        type       : 'linear',
+        startPoint : { x : "0%"   , y : "0%"   },
+        endPoint   : { x : "100%" , y : "100%" },
+        colors     : [{ color : "#3634b4" , offset: 0 }, { color : "#c644fc" , offset : 1 }],
+    }  
+},
+
+"#profileInfoContainer" : {
+    top    : 64,
+    height : 200,
+    layout : "vertical"
+},
+"#twitterProfileImage" : {
+    top    : 20,
+    height : 50,
+    width  : 50,
+    backgroundColor : "#00ff00"  
+},
+"#twitterHandleLabel" : {
+    font : {
+        fontSize : 18
+    }
+},
+"#locationLabel" : {
+    font : {
+        fontSize : 14
+    }
+},
+"#userStatsContainer" : {
+    width  : Ti.UI.SIZE,
+    height : Ti.UI.SIZE,
+    layout : "horizontal"  
+},
+"#endorsersImageView" : {
+    
+},
+"#amountOfEndorsersLabel" : {
+    
 }

@@ -1,22 +1,21 @@
 <Alloy>
 	<View id="containerView">
-		<ImageView id="closeButton"/>
 		<ScrollView id="dreemContainer">
-			<View id="titleAndEndorseContainer">
-				<Label id="titleLabel"/>		
-				<View id="endorseContainer">	
-					<ImageView id="endorseButton"/>
-					<Label id="endorseLabel"/>
-				</View>
-			</View>
+			<Label id="titleLabel"/>		
 			<Label id="amountOfEndorsersLabel"/>
 			<Label id="fullDreemLabel"/>
 		</ScrollView>
-		<View id="twitterDetailsContainer">
-			<ImageView id="twitterIcon"/>
-			<View id="twitterInfoLabelsContainer">
-				<Label id="twitterHandleLabel"/>
-				<Label id="twitterLocationLabel"/>
+		<View id="bottomBarView">
+			<View id="twitterDetailsContainer">
+				<ImageView id="twitterIcon"/>
+				<View id="twitterInfoLabelsContainer">
+					<Label id="twitterHandleLabel"/>
+					<Label id="twitterLocationLabel"/>
+				</View>
+			</View>
+			<View id="endorseContainer">	
+				<ImageView id="endorseButton"/>
+				<Label id="endorseLabel"/>
 			</View>
 		</View>
 	</View>

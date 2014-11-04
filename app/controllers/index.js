@@ -35,7 +35,7 @@ function addEventListeners() {
     $.dreemsTable.addEventListener( "click" , function( e ) {
         // TODO: Pass correct data to full dreem
         var fullDreemView = Alloy.createController( "fullDreemView" , {
-            // Used to remove the fulldREEMView from inside itself, after fading it out nicely. We're also changing the iOS status bar color here
+            // Used to remove the fullDreemView from inside itself, after fading it out nicely. We're also changing the iOS status bar color here
             closeFullDreemView   : function() {
                 if ( OS_IOS ) {
                     // Change status bar black
@@ -47,7 +47,8 @@ function addEventListeners() {
             changeStatusBarColor : function() {
                 // Change status bar white
                 $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.DEFAULT;
-            }
+            },
+            mainWin : $.mainWin
         }).getView();
             
         $.mainWin.add( fullDreemView );
@@ -88,14 +89,15 @@ function addEventListeners() {
             var newDreemView = Alloy.createController( "newDreemView" , {
                 // Used to remove the newDreenView from inside itself, after fading it out nicely. We're also changing the iOS status bar color here
                 closeNewDreemView       : function() {
+                    $.mainWin.remove( newDreemView );
+                },
+                changeStatusBarColorBlack : function() {
                     if ( OS_IOS ) {
                         // Change status bar black
                         $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK;
                     }
-                    
-                    $.mainWin.remove( newDreemView );
                 },
-                changeStatusBarColor : function() {
+                changeStatusBarColorWhite : function() {
                     // Change status bar white
                     $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.DEFAULT;
                 }

@@ -27,7 +27,7 @@ function addEventListeners() {
     });
     
     $.containerView.addEventListener( "swipe" , function( e ) {
-        if ( e.direction == "right" ) {
+        if ( e.direction == "left" ) {
             $.containerView.animate({ opacity  : 0, duration : 600 } , args.closeLoginView );
         }  
     });

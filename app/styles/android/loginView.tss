@@ -97,5 +97,5 @@
 		fontSize   : 14
 	},
 	color : "#bbb",
-	text  : "No account? No problem!\nSwipe right to see\nwhat people are dreaming of"
+	text  : "No account? No problem!\nSwipe left to see\nwhat people are dreaming of"
 }

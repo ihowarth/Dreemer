@@ -1,6 +1,7 @@
 "#containerView" : {
-	backgroundColor : "#fff",
-	opacity 		: 0
+	top				: Alloy.Globals.deviceMeasurements.height,
+	bottom			: Alloy.Globals.deviceMeasurements.minusHeight,
+	backgroundColor : "#fff"
 },
 
 "#twitterInfoContainerView" : {

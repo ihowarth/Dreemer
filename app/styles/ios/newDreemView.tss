@@ -4,43 +4,24 @@
 	backgroundColor : "#fff"
 },
 
-"#twitterInfoContainerView" : {
-	top    		 : 25,
-	left   		 : 20,
-	touchEnabled : false,
-	layout 		 : "horizontal"
+"#swipeDownView" : {
+	top	   : 0,
+	height : 60
 },
-"#usersTwitterIcon" : {
-	height 		 : 30,
-	width  		 : 30,
-	touchEnabled : false,
-	backgroundColor : "#0000ff"
-},
-"#twitterHandleLabel" : {
-	left  		 : 10,
-	width 		 : 200,
+"#howToCloseLabel" : {
+	top			 : 30,
 	font  		 : {
-		fontSize   : 16,
+		fontSize   : 12,
 		fontFamily : Alloy.Globals.fonts.lightFont
 	},
 	color 		 : "#222",
 	touchEnabled : false,
-	text  		 : "@davidzendoval"
+	text  		 : "Swipe down to close"
 },
-
-
-"#closeButton" : {
-	top    : 30,
-	right  : 20,
-	height : 22,
-	width  : 22, 
-	backgroundColor : "#ff0000"
-},
-
 
 "#dreamContainerScrollView" : {
 	left   : 20,
-	top    : 80,
+	top    : 60,
 	bottom : 60,
 	width  : "90%",
 	layout : "vertical"

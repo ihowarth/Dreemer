@@ -9,7 +9,7 @@ var args = arguments[0] || {};
 
 (function init() {
     if ( OS_IOS ) {
-        args.changeStatusBarColor();    
+        args.changeStatusBarColorBlack();    
     }
     
     $.containerView.animate({ opacity : 1 , duration : 600 });
@@ -26,10 +26,11 @@ function addEventListeners() {
     }
     
     // Also, we can swpie right to close the view
-    $.containerView.addEventListener( "swipe" , function( e ) {
-        if ( e.direction == "right" ) {
-            closeFullDreemView();
-        } 
+    $.containerView.addEventListener( "click" , function( e ) {
+        // if ( e.direction == "right" ) {
+            console.log("WHAT");
+            // closeFullDreemView();
+        // } 
     });
     
     $.endorseContainer.addEventListener( "click" , function() {
@@ -52,12 +53,18 @@ function addEventListeners() {
  */
 
 function closeFullDreemView() {
-    args.mainWin.removeEventListener( "androidback" , closeFullDreemView );
+    if ( OS_IOS ) {
+        args.changeStatusBarColorWhite();
+            
+    } else {
+        args.mainWin.removeEventListener( "androidback" , closeFullDreemView );    
+    }
+    
     $.containerView.animate({ opacity : 0 , duration : 600 } , args.closeFullDreemView );
 }
 
+// TODO: change these for the real details
 function setData() {
-    // TODO: change these for the real details
     $.titleLabel.text = "An app to share your dreams with the world, and so much more";
     
     $.amountOfEndorsersLabel.text = "100 dreemers endorse this";

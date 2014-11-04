@@ -8,26 +8,26 @@ var args = arguments[0] || {};
  */
 
 (function init() {
-    $.containerView.animate({ top : 0 , bottom : 0 , duration : 300 } , function() {
-        if ( OS_IOS ) {
-            args.changeStatusBarColorWhite();    
-        }
-    });
+    if ( OS_IOS ) {
+        args.changeStatusBarColorBlack();    
+    }
+    
+    $.containerView.animate({ top : 0 , bottom : 0 , duration : 300 });    
     
     addEventListeners();   
 })();
 
 function addEventListeners() {
-    $.closeButton.addEventListener( "click" , function() {
-        args.changeStatusBarColorBlack();
-        $.containerView.animate({ top : Alloy.Globals.deviceMeasurements.height , bottom : Alloy.Globals.deviceMeasurements.minusHeight , duration : 300 } , args.closeNewDreemView );
-    });   
-    $.containerView.addEventListener( "swipe" , function( e ) {
-        if ( e.direction == "right" ) {
-            args.changeStatusBarColorBlack();
-            $.containerView.animate({ top : Alloy.Globals.deviceMeasurements.height , bottom : Alloy.Globals.deviceMeasurements.minusHeight , duration : 300 } , args.closeNewDreemView );
-        }
-    });
+    if ( OS_IOS ) {
+        $.swipeDownView.addEventListener( "swipe" , function( e ) {
+            if ( e.direction == "down" ) {
+                closeNewDreemView();
+            }
+        });
+            
+    } else {
+        args.mainWin.addEventListener( "androidback" , closeNewDreemView );
+    }
     
     // Handle the focusing and bluring of the title textArea, as we have to do the hint text manually in textAreas because of iOS
     function removeTitleHintText() {
@@ -63,4 +63,22 @@ function addEventListeners() {
         // TODO: Post dream 
         alert( "Post dream" );
     });
+}
+
+
+/*
+ * Main functions
+ * 
+ * closeNewDreemView
+ */
+
+function closeNewDreemView() {
+    if ( OS_IOS ) {
+        args.changeStatusBarColorWhite();
+        
+    } else {
+        args.mainWin.addEventListener( "androidback" , closeNewDreemView );
+    }
+    
+    $.containerView.animate({ top : Alloy.Globals.deviceMeasurements.height , bottom : Alloy.Globals.deviceMeasurements.minusHeight , duration : 300 } , args.closeNewDreemView );
 }

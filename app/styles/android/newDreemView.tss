@@ -4,44 +4,10 @@
 	backgroundColor : "#fff"
 },
 
-"#twitterInfoContainerView" : {
-	top    		 : 10,
-	left   		 : 20,
-	touchEnabled : false,
-	layout 		 : "horizontal"
-},
-"#usersTwitterIcon" : {
-	height 		 : 30,
-	width  		 : 30,
-	touchEnabled : false,
-	backgroundColor : "#0000ff"
-},
-"#twitterHandleLabel" : {
-	left  		 : 10,
-	width 		 : 200,
-	font  		 : {
-		fontSize   : 16,
-		fontFamily : Alloy.Globals.fonts.lightFont
-	},
-	color 		 : "#222",
-	touchEnabled : false,
-	text  		 : "@davidzendoval"
-},
-
-
-"#closeButton" : {
-	top    : 15,
-	right  : 20,
-	height : 22,
-	width  : 22, 
-	backgroundColor : "#ff0000"
-},
-
-
 "#dreamContainerScrollView" : {
+	top    : 0,
 	left   : 20,
-	top    : 70,
-	bottom : 70,
+	bottom : 60,
 	width  : "90%",
 	layout : "vertical"
 },

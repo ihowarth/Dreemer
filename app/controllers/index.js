@@ -32,28 +32,6 @@ function addEventListeners() {
         isWinOpen = true;
     });
     
-    $.dreemsTable.addEventListener( "click" , function( e ) {
-        // TODO: Pass correct data to full dreem
-        var fullDreemView = Alloy.createController( "fullDreemView" , {
-            // Used to remove the fullDreemView from inside itself, after fading it out nicely. We're also changing the iOS status bar color here
-            closeFullDreemView   : function() {
-                if ( OS_IOS ) {
-                    // Change status bar black
-                    $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK;
-                }
-                    
-                $.mainWin.remove( fullDreemView );
-            },
-            changeStatusBarColor : function() {
-                // Change status bar white
-                $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.DEFAULT;
-            },
-            mainWin : $.mainWin
-        }).getView();
-            
-        $.mainWin.add( fullDreemView );
-    });
-    
     $.mainWin.addEventListener( "swipe" , function( e ){
         //If left; show random dreem, else; open newDreamView
         if ( e.direction == "left" ) {
@@ -62,6 +40,27 @@ function addEventListeners() {
         } else {
             
         }
+    });
+    
+    $.dreemsTable.addEventListener( "click" , function( e ) {
+        // TODO: Pass correct data to full dreem
+        var fullDreemView = Alloy.createController( "fullDreemView" , {
+            // Used to remove the fullDreemView from inside itself, after fading it out nicely. We're also changing the iOS status bar color here
+            closeFullDreemView   : function() {
+                $.mainWin.remove( fullDreemView );
+            },
+            changeStatusBarColorBlack : function() {
+                // Change status bar black
+                $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.DEFAULT;   
+            },
+            changeStatusBarColorWhite : function() {
+                // Change status bar white
+                $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK;   
+            },
+            mainWin : $.mainWin
+        }).getView();
+            
+        $.mainWin.add( fullDreemView );
     });
     
     $.profileButton.addEventListener( "click" , function() {
@@ -92,15 +91,14 @@ function addEventListeners() {
                     $.mainWin.remove( newDreemView );
                 },
                 changeStatusBarColorBlack : function() {
-                    if ( OS_IOS ) {
-                        // Change status bar black
-                        $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK;
-                    }
+                    // Change status bar black
+                    $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.DEFAULT;  
                 },
                 changeStatusBarColorWhite : function() {
                     // Change status bar white
-                    $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.DEFAULT;
-                }
+                    $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK;
+                },
+                mainWin : $.mainWin
             }).getView();
             
             $.mainWin.add( newDreemView );

@@ -1,6 +1,6 @@
 "#containerView" : {
-    backgroundColor : "#fff",
-    opacity         : 0  
+    backgroundColor : "#4a4a50",
+    opacity         : 0
 },
 
 "Label" : {
@@ -10,12 +10,12 @@
 },
 
 "#navBarView" : {
-    top             : 0,
+	top				: 0,
     height          : 64,
     backgroundColor : "#97999a"
 },
 "#backButton" : {
-    left   : 15,
+    left   : 10,
     bottom : 5,
     width  : 30,
     height : 30,
@@ -30,7 +30,7 @@
 },
 
 "#backgroundView" : {
-    top            : 64,
+	top			   : 64,	
     height         : 200,
     backgroundGradient : {
         type       : 'linear',
@@ -41,7 +41,7 @@
 },
 
 "#profileInfoContainer" : {
-    top    : 64,
+	top    : 64,
     height : 200,
     layout : "vertical"
 },
@@ -71,4 +71,20 @@
 },
 "#amountOfEndorsersLabel" : {
     
+},
+
+"#noResultsLabel" : {
+	font  : {
+		fontSize : 20
+	},
+	color : "#fff",
+	text  : "No results found",
+	top	  : 280	
+},
+
+"#tableView" : {
+	top 			: 264,
+	height			: Ti.UI.SIZE,
+	separatorColor  : "#4a4a50",
+	backgroundColor : "#4a4a50"
 }

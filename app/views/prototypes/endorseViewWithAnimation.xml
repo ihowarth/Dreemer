@@ -1,4 +1,6 @@
 <Alloy>
-	<View class="container">
+	<View id="containerView">
+		<View id="backgroundView"/>
+		<ImageView id="endorseImageView"/>
 	</View>
 </Alloy>

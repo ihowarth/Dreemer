@@ -19,7 +19,28 @@ function isLoggedIn() {
  */
 var APP = {
     // User login check
-    loggedIn : isLoggedIn()
+    loggedIn : isLoggedIn(),
+    
+    // Custom recursive fuinction to remove all children of a view and null everything one at a time
+    releaseAllMemoryOfView : function( view ) {
+        // Getting the chilldren to null, then removing them from the view
+        var childrenArray = view.getChildren();
+        view.removeAllChildren();
+        
+        // Checking if each child has it's own children, recursing the function if they do and nulling them if not
+        for ( var i = 0; i < childrenArray.length; i++) {
+            var secondChildrenArray = childrenArray[i].getChildren();
+            
+            if ( secondChildrenArray.length > 0 ) {
+                for ( var j = 0; j < secondChildrenArray.length; j++ ) {
+                    APP.releaseAllMemoryOfView( secondChildrenArray[j] );
+                }
+                
+            } else {
+                childrenArray[i] = null;
+            }
+        }
+    },
 };
 
 

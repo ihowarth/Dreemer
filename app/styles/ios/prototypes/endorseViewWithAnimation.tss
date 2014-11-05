@@ -1,4 +1,12 @@
+"#containerView" : {
+	opacity : 0
+},
 
-".container" : {
-  
+"#backgroundView" : {
+	backgroundColor : "#000",
+	opacity			: 0.5
+},
+
+"#endorseImageView" : {
+	image : "/endorsedView.png"
 }

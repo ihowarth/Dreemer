@@ -33,7 +33,8 @@ function addEventListeners() {
     });
     
     $.mainWin.addEventListener( "swipe" , function( e ){
-        //If left; show random dreem, else; open newDreamView
+        // If left; show random dreem, else; open newDreamView
+        //TODO: 
         if ( e.direction == "left" ) {
             
             
@@ -48,6 +49,7 @@ function addEventListeners() {
             // Used to remove the fullDreemView from inside itself, after fading it out nicely. We're also changing the iOS status bar color here
             closeFullDreemView   : function() {
                 $.mainWin.remove( fullDreemView );
+                APP.releaseAllMemoryOfView( fullDreemView );
             },
             changeStatusBarColorBlack : function() {
                 // Change status bar black
@@ -66,7 +68,7 @@ function addEventListeners() {
     $.profileButton.addEventListener( "click" , function() {
         // If the user is not logged in; open loginView, else; open the user's profile
         // TODO: !APP.loggedIn
-        if ( true ) {
+        if ( false ) {
             openLoginView();
             
         } else {
@@ -74,6 +76,7 @@ function addEventListeners() {
 	            // Used to remove the profileView from inside itself, after fading it out nicely. We're also changing the iOS status bar color here
 	            closeProfileView   : function() {
 	                $.mainWin.remove( profileView );
+	                APP.releaseAllMemoryOfView( profileView );
 	            }
 	        }).getView();
 	            
@@ -89,6 +92,7 @@ function addEventListeners() {
                 // Used to remove the newDreenView from inside itself, after fading it out nicely. We're also changing the iOS status bar color here
                 closeNewDreemView       : function() {
                     $.mainWin.remove( newDreemView );
+                    APP.releaseAllMemoryOfView( newDreemView );
                 },
                 // Needs an iOS check because it's used as a callback
                 changeStatusBarColorBlack : function() {
@@ -124,6 +128,7 @@ function openLoginView() {
         // Done to remove the loginView elegantly inside the controller
         closeLoginView : function() {
             $.mainWin.remove( loginView );
+            APP.releaseAllMemoryOfView( loginView );
         },
         isWinOpen      : isWinOpen
     });

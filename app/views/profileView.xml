@@ -14,6 +14,8 @@
 	           <Label id="amountOfEndorsersLabel"/>
 	        </View>
 	    </View>
-	    <!--How to handle this part? Table view or prototpyes?-->
+	    <Label id="noResultsLabel"/>
+	    <TableView id="tableView">
+	    </TableView>
 	</View>
 </Alloy>

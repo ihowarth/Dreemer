@@ -36,11 +36,18 @@ function addEventListeners() {
     
     $.endorseContainer.addEventListener( "click" , function() {
         // TODO: Make endorsment call
-        alert( "Do awesome animation and endorse" );
+        var endorseView = Alloy.createController( "prototypes/endorseViewWithAnimation" , { 
+            closeEndorseView : function() {
+                $.containerView.remove( endorseView );  
+                APP.releaseAllMemoryOfView( endorseView );      
+            }  
+        }).getView();
+        
+        $.containerView.add( endorseView ); 
     });
     
     $.twitterDetailsContainer.addEventListener( "click" , function() {
-        // TODO: Open users profuile
+        // TODO: Open users profile
         alert( "Open user profile" );
     });
 }

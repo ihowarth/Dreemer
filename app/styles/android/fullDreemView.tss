@@ -11,7 +11,7 @@
 },
 
 "#dreemContainer" : {
-	top    	     : 10,
+	top    	     : 0,
 	bottom 	     : 70,
     left         : 15,
     right        : 15,

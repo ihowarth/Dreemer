@@ -3,16 +3,11 @@
 	width  : Ti.UI.FILL
 },
 
-"#backgroundGradient" : {
-	height 		       : Ti.UI.FILL,
-	width  		 	   : Ti.UI.FILL,
-	touchEnabled 	   : false,
-	backgroundGradient : {
-        type       : 'linear',
-        startPoint : { x : "0%"   , y : "0%"   },
-        endPoint   : { x : "100%" , y : "100%" },
-        colors     : [{ color : "#3634b4" , offset: 0 }, { color : "#c644fc" , offset : 1 }],
-    }
+"#backgroundView" : {
+	height 		    : Ti.UI.FILL,
+	width  		 	: Ti.UI.FILL,
+	touchEnabled 	: false,
+	backgroundColor : "#671EB0"
 },
 
 
@@ -28,6 +23,7 @@
 
 "#elementsContainer" : {
 	top    : 150,
+	height : Ti.UI.SIZE,
 	layout : "vertical"
 },
 
@@ -96,5 +92,5 @@
 		fontSize   : 14
 	},
 	color : "#bbb",
-	text  : "No account? No problem!\nSwipe left to see\nwhat people are dreaming of"
+	text  : "No account? No problem!\nSwipe left to see\nwhat people are dreeming of"
 }

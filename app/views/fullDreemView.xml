@@ -1,8 +1,21 @@
 <Alloy>
 	<View id="containerView">
+		
+		<View id="swipeDownView" platform="ios">		
+			<ImageView id="closeChevron"/>
+		</View>
+		
 	   	<ScrollView id="dreemContainer">
     			<Label id="titleLabel"/>		
-    			<Label id="amountOfEndorsersLabel"/>
+    			<View id="endorsersView">
+    				<ImageView id="endorseStarImage"/>
+    				<Label id="amountOfEndorsersLabel"/>
+    			</View>
+    			<View id="flagDreemView">
+    				<ImageView id="flagImage"/>
+    				<Label id="flagLabel"/>
+    			</View>
+    			<View id="separatorLine"/>
     			<Label id="fullDreemLabel"/>
 		</ScrollView>
 		<View id="bottomBarView">

@@ -6,12 +6,13 @@
 
 "#dreamContainerScrollView" : {
 	top    : 0,
-	left   : 20,
+	left   : 15,
+	right  : 15,
 	bottom : 60,
-	width  : "90%",
 	layout : "vertical"
 },
 "#dreamTitleTextArea" : {
+	top		   : 20,
 	left       : 0,
 	width      : Ti.UI.FILL,
 	height     : Ti.UI.SIZE,
@@ -22,28 +23,18 @@
 	maxLength  : 100,
 	scrollable : false,
 	color      : "#aaa",
-	value      : "Dream title..."
+	value      : "Dreem title..."
 },
 "#separatorLine" : {
 	left   			 : 0,
-	top    			 : 20,
+	top    			 : 30,
 	height 			 : 1,
 	width  			 : Ti.UI.FILL,
 	backgroundColor  : "#666"
 },
-"#dreamQuestionLabel" : {
-	left      : 5,
-	font      : {
-		fontSize   : 14,
-		fontFamily : Alloy.Globals.fonts.lightFont
-	},
-	textAlign : Ti.UI.TEXT_ALIGNMENT_LEFT,
-	color     : "#666", 
-	text      : "What is your dream about?"
-},
-"#imagineTextArea" : {
+"#dreamDetailsTextArea" : {
 	left      : 0,
-	top       : 15,
+	top       : 5,
 	width  	  : Ti.UI.FILL,
 	height 	  : Ti.UI.SIZE,
 	font   	  : {
@@ -51,14 +42,43 @@
 		fontFamily : Alloy.Globals.fonts.lightFont
 	},
 	maxLength : 500,
-	color     : "#aaa",
-	value     : "Imagine..."
+	color     : "#999",
+	value     : "What is your dreem about?"
 },
 
 
-"#postButton" : {
+"#infoView" : {
+	height : Ti.UI.SIZE,
+	left   : 15,
+	right  : 15,
+	bottom : 75,
+	layout : "horizontal"
+},
+"#infoImageView" : {
+	top    : 0,
+	width  : 15,
+	height : 15,
+	backgroundColor : "#ccc" 
+},
+"#infoWhatLabel" : {
+	font  : {
+		fontSize : 12
+	},
+	color : "#ccc",
+	text  : " WHAT SHOULD YOU POST?\n"	
+},
+"#infoRestLabel" : {
+	font  : {
+		fontSize : 12
+	},
+	color : "#ccc",
+	text  : "(Share with other Dreemers a cool idea, a world-changing invention, or just a thought that you're dreeming of making a reality!)"	
+},
+
+
+"#postButtonView" : {
 	bottom 			: 0,
-	height 			: 70,
+	height 			: 60,
 	backgroundColor : "#eee"	
 },
 "#postButtonLabel" : {
@@ -68,5 +88,5 @@
 	},
 	color 		 : "#666",
 	touchEnabled : false,
-	text  		 : "Post Dream",
+	text  		 : "POST DREEM",
 }

@@ -1,0 +1,14 @@
+<Alloy>
+	<View id="containerView">
+		<ImageView id="twitterImage"/>
+		<Label id="helloLabel"/>
+		<Label id="chooseLabel"/>
+		<View id="usernameContainer">
+			<View id="usernameStrip"/>
+			<TextField id="usernameTextField"/>		
+		</View>
+		<View id="continueButtonView">
+			<Label id="continueLabel"/>
+		</View>
+	</View>
+</Alloy>

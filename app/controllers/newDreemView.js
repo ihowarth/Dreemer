@@ -1,5 +1,7 @@
 var args = arguments[0] || {};
 
+var postValid = false;
+
 /*
  * Initialisation functions - only executed once
  * 
@@ -8,8 +10,14 @@ var args = arguments[0] || {};
  */
 
 (function init() {
-    $.containerView.animate({ top : 0 , bottom : 0 , duration : 300 } , args.changeStatusBarColorBlack );    
-    
+    // Show status bar on iOS
+    if ( OS_IOS ) {
+        $.containerView.animate({ top : 20 , bottom : 0 , duration : 300 });
+            
+    } else {
+        $.containerView.animate({ top : 0 , bottom : 0 , duration : 300 });
+    }
+        
     addEventListeners();   
 })();
 
@@ -19,6 +27,9 @@ function addEventListeners() {
             if ( e.direction == "down" ) {
                 closeNewDreemView();
             }
+        });
+        $.closeChevron.addEventListener( "click" , function( e ) {
+            closeNewDreemView();
         });
             
     } else {
@@ -35,29 +46,41 @@ function addEventListeners() {
     
     $.dreamTitleTextArea.addEventListener( "blur" , function() {
         if ( $.dreamTitleTextArea.value == "" ) {
-            $.dreamTitleTextArea.value = "Dream title...";
+            $.dreamTitleTextArea.value = "Dreem title...";
             $.dreamTitleTextArea.addEventListener( "focus" , removeTitleHintText );
         }   
     });
     
     // Handle the focusing and bluring of the dreem textArea, as we have to do the hint text manually in textAreas because of iOS
-    function removeImagineHintText() {
-        $.imagineTextArea.removeEventListener( "focus" , removeImagineHintText );
+    function removeDetailsHintText() {
+        $.dreamDetailsTextArea.removeEventListener( "focus" , removeDetailsHintText );
         
-        $.imagineTextArea.value = "";
+        $.dreamDetailsTextArea.value = "";
     }
-    $.imagineTextArea.addEventListener( "focus" , removeImagineHintText );
+    $.dreamDetailsTextArea.addEventListener( "focus" , removeDetailsHintText );
     
-    $.imagineTextArea.addEventListener( "blur" , function() {
-        if ( $.imagineTextArea.value == "" ) {
-            $.imagineTextArea.value = "Imagine...";
-            $.imagineTextArea.addEventListener( "focus" , removeImagineHintText );
+    $.dreamDetailsTextArea.addEventListener( "blur" , function() {
+        if ( $.dreamDetailsTextArea.value == "" ) {
+            $.dreamDetailsTextArea.value = "What is your dreem about?";
+            $.dreamDetailsTextArea.addEventListener( "focus" , removeDetailsHintText );
         }   
     });
     
-    $.postButton.addEventListener( "click" , function() {
+    // If the text fields are changed, do the check to change the postDreem button and postInfoLabel
+    $.dreamTitleTextArea.addEventListener( "change" , function() {
+         checkIfPostable();
+    });
+    $.dreamDetailsTextArea.addEventListener( "change" , function() {
+         checkIfPostable();
+    });
+    
+    $.postButtonView.addEventListener( "click" , function() {
         // TODO: Post dream 
-        alert( "Post dream" );
+        if ( postValid == false ) {
+            alert( "Dreem title and details must be filled in before posting" );    
+        } else {
+            alert( "Post dreem" );
+        }
     });
 }
 
@@ -66,15 +89,42 @@ function addEventListeners() {
  * Main functions
  * 
  * closeNewDreemView
+ * checkIfPostable
  */
 
 function closeNewDreemView() {
-    if ( OS_IOS ) {
-    	args.changeStatusBarColorWhite();
-    	
-    } else {
+    if ( OS_ANDROID ) {
    		args.mainWin.removeEventListener( "androidback" , closeNewDreemView );
     }
     
     $.containerView.animate({ top : Alloy.Globals.deviceMeasurements.height , bottom : Alloy.Globals.deviceMeasurements.minusHeight , duration : 300 });
+}
+
+// Checks to see if both text fields have valid data and allows the 
+function checkIfPostable() {
+    if ( $.dreamTitleTextArea.value != "" && $.dreamTitleTextArea.value != "Dreem title..." &&
+         $.dreamDetailsTextArea.value != "" && $.dreamDetailsTextArea.value != "What is your dreem about?" ) {
+             
+        postValid = true;     
+        
+        $.infoView.animate({ opacity : 0 });
+        $.postButtonView.animate({ backgroundColor : "#50a0fa" });
+        if ( OS_IOS ) {
+            $.postButtonLabel.animate({ color : "#fff" });    
+        } else {
+            $.postButtonLabel.color = "#fff";
+        }
+               
+    } else {
+        postValid = false;
+        
+        $.infoView.animate({ opacity : 1 });
+        $.postButtonView.animate({ backgroundColor : "#eee" });
+        if ( OS_IOS ) {
+            $.postButtonLabel.animate({ color : "#666" });    
+        } else {
+            $.postButtonLabel.color = "#666";
+        }
+        
+    }
 }

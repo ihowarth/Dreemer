@@ -2,16 +2,20 @@
 	<View id="containerView">
 		
 		<View id="swipeDownView" platform="ios">		
-			<Label id="howToCloseLabel"/>
+			<ImageView id="closeChevron"/>
 		</View>
 		
 		<ScrollView id="dreamContainerScrollView">
 			<TextArea id="dreamTitleTextArea"/>
 			<View id="separatorLine"/>
-			<Label id="dreamQuestionLabel"/>
-			<TextArea id="imagineTextArea"/>
+			<TextArea id="dreamDetailsTextArea"/>
 		</ScrollView>
-		<View id="postButton">
+		<View id="infoView">
+			<ImageView id="infoImageView"/>
+			<Label id="infoWhatLabel"/>
+			<Label id="infoRestLabel"/>
+		</View>
+		<View id="postButtonView">
 			<Label id="postButtonLabel"/>
 		</View>
 	</View>

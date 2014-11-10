@@ -51,14 +51,6 @@ function addEventListeners() {
                 $.mainWin.remove( fullDreemView );
                 APP.releaseAllMemoryOfView( fullDreemView );
             },
-            changeStatusBarColorBlack : function() {
-                // Change status bar black
-                $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.DEFAULT;   
-            },
-            changeStatusBarColorWhite : function() {
-                // Change status bar white
-                $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK;   
-            },
             mainWin : $.mainWin
         }).getView();
             
@@ -93,17 +85,6 @@ function addEventListeners() {
                 closeNewDreemView       : function() {
                     $.mainWin.remove( newDreemView );
                     APP.releaseAllMemoryOfView( newDreemView );
-                },
-                // Needs an iOS check because it's used as a callback
-                changeStatusBarColorBlack : function() {
-                	if ( OS_IOS ) {
-                		// Change status bar black	
-                    	$.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.DEFAULT;	
-                	}
-                },
-                changeStatusBarColorWhite : function() {
-                	// Change status bar white
-                    $.mainWin.statusBarStyle = Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK;	
                 },
                 mainWin : $.mainWin
             }).getView();
@@ -161,7 +142,7 @@ function openLoginView() {
 
 function getTestView() {
     return Alloy.createController( "prototypes/dreemSummaryView" , {
-        dreemTitle   : "An app to make your dreams come true and so much more",
+        dreemTitle   : "An app to make your dreems come true and so much more",
         userHandle   : "@davidzendoval",
         userLocation : "Guadalajara, Mexico"
     }).getView();

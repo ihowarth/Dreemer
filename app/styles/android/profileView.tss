@@ -12,7 +12,7 @@
 "#navBarView" : {
 	top				: 0,
     height          : 44,
-    backgroundColor : "#97999a"
+    backgroundColor : "#671EB0"
 },
 "#backButton" : {
     left   : 10,

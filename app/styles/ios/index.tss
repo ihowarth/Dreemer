@@ -6,7 +6,7 @@
 "#navBarView" : {
     top             : 0,
 	height 			: 64,
-	backgroundColor : "#97999a"
+	backgroundColor : "#671EB0"
 },
 
 "#profileButton" : {
@@ -24,7 +24,7 @@
 		fontSize   : 18,
 		fontFamily : Alloy.Globals.fonts.regularFont
 	},
-	text   : "Everyone's Dreams"	
+	text   : "Everyone's Dreems"	
 },
 
 "#postButton" : {

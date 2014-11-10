@@ -8,10 +8,6 @@ var args = arguments[0] || {};
  */
 
 (function init() {
-    if ( OS_IOS ) {
-        args.changeStatusBarColorBlack();    
-    }
-    
     $.containerView.animate({ opacity : 1 , duration : 600 });
     
     setData();
@@ -50,6 +46,11 @@ function addEventListeners() {
         // TODO: Open users profile
         alert( "Open user profile" );
     });
+    
+    $.flagDreemView.addEventListener( "click" , function() {
+        // TODO: Flag post
+        alert( "Flag" ); 
+    });
 }
 
 
@@ -61,10 +62,7 @@ function addEventListeners() {
  */
 
 function closeFullDreemView() {
-    if ( OS_IOS ) {
-        args.changeStatusBarColorWhite();
-            
-    } else {
+    if ( OS_ANDROID ) {
         args.mainWin.removeEventListener( "androidback" , closeFullDreemView );    
     }
     
@@ -73,15 +71,15 @@ function closeFullDreemView() {
 
 // TODO: change these for the real details
 function setData() {
-    $.titleLabel.text = "An app to share your dreams with the world, and so much more";
+    $.titleLabel.text = "An app to share your dreems with the world, and so much more";
     
-    $.amountOfEndorsersLabel.text = "100 dreemers endorse this";
+    $.amountOfEndorsersLabel.text = " 100 Dreemers endorse this";
     
-    $.fullDreemLabel.text = "Imagine an app that could allow you to post the dreams you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!\n\n" +
-                            "Imagine an app that could allow you to post the dreams you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!\n\n" + 
-                            "Imagine an app that could allow you to post the dreams you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!\n\n" +
-                            "Imagine an app that could allow you to post the dreams you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!\n\n" +
-                            "Imagine an app that could allow you to post the dreams you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!";
+    $.fullDreemLabel.text = "Imagine an app that could allow you to post the dreems you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!\n\n" +
+                            "Imagine an app that could allow you to post the dreems you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!\n\n" + 
+                            "Imagine an app that could allow you to post the dreems you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!\n\n" +
+                            "Imagine an app that could allow you to post the dreems you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!\n\n" +
+                            "Imagine an app that could allow you to post the dreems you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!";
     
     // $.twitterIcon.image      = ;
     $.twitterHandleLabel.text   = "@davidzendoval";

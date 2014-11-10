@@ -39,6 +39,6 @@
 	left   						: 0,
 	right  						: 0,
 	showVerticalScrollIndicator : false,
-	separatorColor  			: "#4a4a50",
-	backgroundColor 			: "#4a4a50"
+	separatorColor  			: "#1a1a1a",
+	backgroundColor 			: "#1a1a1a"
 }

@@ -1,6 +1,7 @@
 "#containerView" : {
-	backgroundColor : "#fff",
-	opacity			: 0
+	left 			: Alloy.Globals.deviceMeasurements.width,
+	right			: Alloy.Globals.deviceMeasurements.minusWidth,
+	backgroundColor : "#fff"
 },
 
 "Label" : {

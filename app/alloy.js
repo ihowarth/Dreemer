@@ -60,7 +60,7 @@ if ( OS_IOS ) {
         width  : Ti.Platform.displayCaps.platformWidth,
         
         minusHeight : -Ti.Platform.displayCaps.platformHeight,
-        minuesWidth : -Ti.Platform.displayCaps.platformWidth  
+        minusWidth : -Ti.Platform.displayCaps.platformWidth  
     };;
     
 } else {
@@ -74,6 +74,6 @@ if ( OS_IOS ) {
         width  : 360,
         
         minusHeight : -567,
-        minuesWidth : -360  
+        minusWidth : -360  
     };;
 }

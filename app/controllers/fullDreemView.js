@@ -8,7 +8,7 @@ var args = arguments[0] || {};
  */
 
 (function init() {
-    $.containerView.animate({ opacity : 1 , duration : 600 });
+    $.containerView.animate({ left : 0 , right : 0 , duration : 600 });
     
     setData();
        
@@ -16,16 +16,19 @@ var args = arguments[0] || {};
 })();
 
 function addEventListeners() {
-    // On Android, close the fullDreemView when the back button is pressed
+    // On iOS, we close the fullDreemView by swiping right or by cicking the close chevron
     if ( OS_IOS ) {
         $.containerView.addEventListener( "swipe" , function( e ) {
 	        if ( e.direction == "right" ) {
 	            closeFullDreemView();
 	        } 
 	    });
+	    $.closeChevron.addEventListener( "click" , function( e ) {
+	        closeFullDreemView();
+	    });
         
-    // On iOS, we close the fullDreemView by swiping right
     } else {
+        // On Android, close the fullDreemView when the back button is pressed
     	args.mainWin.addEventListener( "androidback" , closeFullDreemView );
     }
     
@@ -66,7 +69,7 @@ function closeFullDreemView() {
         args.mainWin.removeEventListener( "androidback" , closeFullDreemView );    
     }
     
-    $.containerView.animate({ opacity : 0 , duration : 600 } , args.closeFullDreemView );
+    $.containerView.animate({ left : Alloy.Globals.deviceMeasurements.width , right : Alloy.Globals.deviceMeasurements.minusWidth , duration : 600 } , args.closeFullDreemView );
 }
 
 // TODO: change these for the real details

@@ -17,6 +17,7 @@ function isLoggedIn() {
 /*
  * APP singleton
  */
+
 var APP = {
     // User login check
     loggedIn : isLoggedIn(),
@@ -60,7 +61,7 @@ if ( OS_IOS ) {
         width  : Ti.Platform.displayCaps.platformWidth,
         
         minusHeight : -Ti.Platform.displayCaps.platformHeight,
-        minusWidth : -Ti.Platform.displayCaps.platformWidth  
+        minusWidth  : -Ti.Platform.displayCaps.platformWidth  
     };;
     
 } else {

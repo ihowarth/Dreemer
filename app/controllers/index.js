@@ -33,8 +33,8 @@ function addEventListeners() {
     });
     
     $.mainWin.addEventListener( "swipe" , function( e ){
-        // If left; show random dreem, else; open newDreamView
-        //TODO: 
+        // If left; show random dreem, else; open fullDreamView
+        //TODO: fix swipes
         if ( e.direction == "left" ) {
             
             

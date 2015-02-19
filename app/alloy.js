@@ -75,5 +75,5 @@ if ( OS_IOS ) {
         
         minusHeight : -567,
         minusWidth : -360  
-    };;
+    };
 }

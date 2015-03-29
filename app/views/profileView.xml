@@ -3,19 +3,30 @@
 	    <View id="navBarView">
 	        <ImageView id="backButton"/>
 	        <Label id="navBarLabel"/>
+	        <ImageView id="logoutButton"/>
 	    </View>
-	    <View id="backgroundView"/>
 	    <View id="profileInfoContainer">
-	        <ImageView id="twitterProfileImage"/>
-	        <Label id="twitterHandleLabel"/>
-	        <Label id="locationLabel"/>
-	        <View id="userStatsContainer">
-	           <ImageView id="endorsersImageView"/>
-	           <Label id="amountOfEndorsersLabel"/>
+	    	<View id="backgroundView"/>
+	    	<View id="profileContainerVerticalView">
+		        <ImageView id="twitterProfileImage"/>
+		        <Label id="twitterHandleLabel"/>
+		        <Label id="locationLabel"/>
+		        <View id="userStatsContainer">
+		           <ImageView id="endorsersImageView"/>
+		           <Label id="amountOfEndorsersLabel"/>
+		        </View>
 	        </View>
 	    </View>
-	    <Label id="noResultsLabel"/>
-	    <TableView id="tableView">
-	    </TableView>
+	    
+	    
+	    
+	    <View id="resultsContainerView">
+		    <View id="noResultsContainerView">
+		    	<ImageView id="noResultsImageView"/>
+			    <Label id="noResultsLabel"/>
+			</View>
+		    <TableView id="myDreemsTable"/>
+		    <TableView id="endorsedDreemsTable"/>
+		</View>
 	</View>
 </Alloy>

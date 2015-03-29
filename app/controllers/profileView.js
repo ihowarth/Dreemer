@@ -31,7 +31,7 @@ function addEventListeners() {
 
 //TODO : Will be used to set the data of the view
 function setData() {
-	$.twitterHandleLabel.text 	  = "@davidsendoval";
+	$.twitterHandleLabel.text 	  = "@davidzendoval";
 	$.locationLabel.text	  	  = "Guadalajara, Mexico";
 	$.amountOfEndorsersLabel.text = "246 endorsers";
 }

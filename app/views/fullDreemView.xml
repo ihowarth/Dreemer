@@ -5,7 +5,7 @@
 			<ImageView id="closeChevron"/>
 		</View>
 		
-	   	<ScrollView id="dreemContainer">
+	   	<ScrollView id="dreemContainerScrollView">
     			<Label id="titleLabel"/>		
     			<View id="endorsersView">
     				<ImageView id="endorseStarImage"/>
@@ -19,11 +19,13 @@
     			<Label id="fullDreemLabel"/>
 		</ScrollView>
 		<View id="bottomBarView">
-			<View id="twitterDetailsContainer">
-				<ImageView id="twitterIcon"/>
-				<View id="twitterInfoLabelsContainer">
-					<Label id="twitterHandleLabel"/>
-					<Label id="twitterLocationLabel"/>
+			<View id="coloredBarView">
+				<View id="twitterDetailsContainer">
+					<ImageView id="twitterIcon"/>
+					<View id="twitterInfoLabelsContainer">
+						<Label id="twitterHandleLabel"/>
+						<Label id="twitterLocationLabel"/>
+					</View>
 				</View>
 			</View>
 			<View id="endorseContainer">	

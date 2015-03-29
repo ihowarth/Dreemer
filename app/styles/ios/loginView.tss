@@ -22,7 +22,6 @@
 
 
 "#elementsContainer" : {
-	top    : 150,
 	height : Ti.UI.SIZE,
 	layout : "vertical"
 },

@@ -1,6 +1,6 @@
 "#containerView" : {
-    backgroundColor : "#4a4a50",
-    opacity         : 0
+    backgroundColor : "#fff",
+    layout 			: "vertical"
 },
 
 "Label" : {
@@ -10,9 +10,8 @@
 },
 
 "#navBarView" : {
-	top				: 0,
-    height          : 44,
-    backgroundColor : "#671EB0"
+    height          : 64,
+    backgroundColor : "#671eb0"
 },
 "#backButton" : {
     left   : 10,
@@ -23,68 +22,107 @@
 },
 "#navBarLabel" : {
     bottom : 10,
-    font   : {
-        fontSize : 18
-    },
+    color  : "#fff",
+	font   : {
+		fontSize   : 18,
+		fontFamily : Alloy.Globals.fonts.regularFont
+	},
     text   : "Profile"
 },
-
-"#backgroundView" : {
-	top			   : 44,	
-    height         : 200,
-    backgroundGradient : {
-        type       : 'linear',
-        startPoint : { x : "0%"   , y : "0%"   },
-        endPoint   : { x : "100%" , y : "100%" },
-        colors     : [{ color : "#3634b4" , offset: 0 }, { color : "#c644fc" , offset : 1 }],
-    }  
+"#logoutButton" : {
+	right  			: 10,
+    bottom 			: 5,
+    width  			: 30,
+    height 			: 30,
+    backgroundColor : "#0000ff"
 },
 
 "#profileInfoContainer" : {
-	top    : 64,
-    height : 200,
-    layout : "vertical"
+    height : 200
+},
+"#backgroundView" : {
+    backgroundColor : "#999"
+},
+"#profileContainerVerticalView" : {
+	top    : 0,
+	height : Ti.UI.SIZE,
+	width  : Ti.UI.SIZE,
+	layout : "vertical"
 },
 "#twitterProfileImage" : {
-    top    : 20,
-    height : 50,
-    width  : 50,
+    top    			: 20,
+    height 			: 50,
+    width  			: 50,
     backgroundColor : "#00ff00"  
 },
 "#twitterHandleLabel" : {
-    font : {
-        fontSize : 18
-    }
+    top   : 5,
+    font  : {
+		fontSize   : 20,
+		fontFamily : Alloy.Globals.fonts.regularFont
+	},
+	color : " #fff"
 },
 "#locationLabel" : {
-    font : {
-        fontSize : 14
-    }
+	top   : 5,
+    font  : {
+		fontSize   : 14,
+		fontFamily : Alloy.Globals.fonts.regularFont
+	},
+	color : " #fff"
 },
 "#userStatsContainer" : {
+	top    : 5,
     width  : Ti.UI.SIZE,
     height : Ti.UI.SIZE,
     layout : "horizontal"  
 },
 "#endorsersImageView" : {
-    
+    height 			: 15,
+	width  			: 15,
+	backgroundColor : "#00ff00"
 },
 "#amountOfEndorsersLabel" : {
-    
-},
-
-"#noResultsLabel" : {
-	font  : {
-		fontSize : 20
+    left  : 5,
+    font  : {
+		fontSize   : 14,
+		fontFamily : Alloy.Globals.fonts.regularFont
 	},
-	color : "#fff",
-	text  : "No results found",
-	top	  : 280	
+	color : " #fff"
 },
 
-"#tableView" : {
-	top 			: 244,
+
+"#resultsContainerView" : {},
+"#noResultsContainerView" : {
+	height : Ti.UI.SIZE,
+	width  : Ti.UI.SIZE,
+	layout : "vertical"
+},
+"#noResultsImageView" : {
+	width  			: 40,
+	height 			: 40,
+	backgroundColor : "#00ff00"
+},
+"#noResultsLabel" : {
+	top		  : 10,
+	font      : {
+		fontSize : 20
+	},	
+	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
+	color     : "#aaa",
+	text      : "You haven't shared any\ndreems yet"
+},
+"#myDreemsTable" : {
+	top 			: 264,
 	height			: Ti.UI.SIZE,
 	separatorColor  : "#4a4a50",
-	backgroundColor : "#4a4a50"
+	backgroundColor : "#fff",
+	visible			: false
+},
+"#endorsedDreemsTable" : {
+	top 			: 264,
+	height			: Ti.UI.SIZE,
+	separatorColor  : "#4a4a50",
+	backgroundColor : "#fff",
+	visible			: false
 }

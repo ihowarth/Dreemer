@@ -16,10 +16,17 @@
 		           <Label id="amountOfEndorsersLabel"/>
 		        </View>
 	        </View>
+	        
+	        <TabbedBar id="dreemsControlTabbedBar" platform="ios">
+	            <Labels>
+	                <Label>My Dreems</Label>
+	                <Label>Endorsed</Label>
+	            </Labels>
+	        </TabbedBar>
+	        
+	        
+        
 	    </View>
-	    
-	    
-	    
 	    <View id="resultsContainerView">
 		    <View id="noResultsContainerView">
 		    	<ImageView id="noResultsImageView"/>

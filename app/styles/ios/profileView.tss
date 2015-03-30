@@ -11,7 +11,7 @@
 
 "#navBarView" : {
     height          : 64,
-    backgroundColor : "#671EB0"
+    backgroundColor : "#671eb0"
 },
 "#backButton" : {
     left   : 10,
@@ -89,6 +89,14 @@
 		fontFamily : Alloy.Globals.fonts.regularFont
 	},
 	color : " #fff"
+},
+"#dreemsControlTabbedBar[platform=ios]" : {
+	left			: 10,
+	right			: 10,
+	bottom 			: 10,
+	height			: 30,
+	backgroundColor : "#671eb0",
+	index			: 0
 },
 
 "#resultsContainerView" : {},

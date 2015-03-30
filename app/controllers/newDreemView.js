@@ -5,6 +5,7 @@ var postValid = false;
 /*
  * Initialisation functions - only executed once
  * 
+ * 
  * init
  * addEventListeners
  */
@@ -88,7 +89,9 @@ function addEventListeners() {
 /*
  * Main functions
  * 
+ * 
  * closeNewDreemView
+ * 
  * checkIfPostable
  */
 
@@ -99,6 +102,7 @@ function closeNewDreemView() {
     
     $.containerView.animate({ top : Alloy.Globals.deviceMeasurements.height , bottom : Alloy.Globals.deviceMeasurements.minusHeight , duration : 300 });
 }
+
 
 // Checks to see if both text fields have valid data and allows the 
 function checkIfPostable() {

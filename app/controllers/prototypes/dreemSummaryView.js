@@ -4,6 +4,7 @@ var args = arguments[0] || {};
 /*
  * Initialisation functions - only executed once
  * 
+ * 
  * init
  * addEventListeners
  */

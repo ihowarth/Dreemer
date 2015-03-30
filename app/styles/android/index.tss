@@ -25,7 +25,7 @@
 	text   : "Everyone's Dreems"	
 },
 
-"#postButton" : {
+"#composeButton" : {
 	right  : 10,
 	height : 30,
 	width  : 30,

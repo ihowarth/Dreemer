@@ -4,6 +4,7 @@ var args = arguments[0] || {};
 /*
  * Initialisation functions - only executed once
  * 
+ * 
  * init
  * addEventListeners
  */
@@ -26,8 +27,14 @@ var args = arguments[0] || {};
 
 function addEventListeners() {
 	$.backButton.addEventListener( "click" , function() {
-		$.containerView.animate({ opacity : 0 , duration : 600 }, args.closeProfileView );
-	});
+        closeProfileView();
+    });
+	
+	// Handle the Android backbutton event
+    if ( OS_ANDROID ) {
+        // On Android, close the fullDreemView when the back button is pressed
+        args.mainWin.addEventListener( "androidback" , closeProfileView );
+    }
 	
 	$.logoutButton.addEventListener( "click" , function() {
 	    //TODO: Handle logout confirmation in an alert and actual ACS logout.
@@ -63,6 +70,9 @@ function addEventListeners() {
 /*
  * Main functions
  * 
+ * 
+ * closeProfileView
+ * 
  * setData
  * fillMyDreemsTable
  * filEndorsedTable
@@ -71,6 +81,15 @@ function addEventListeners() {
  * showNoResults
  * switchDreemsControl - Android only
  */
+
+function closeProfileView() {
+    if ( OS_ANDROID ) {
+        args.mainWin.removeEventListener( "androidback" , closeProfileView ); 
+    }
+    
+    $.containerView.animate({ opacity : 0 , duration : 600 }, args.closeProfileView );   
+}
+
 
 //TODO : Will be used to set the data of the view
 function setData() {

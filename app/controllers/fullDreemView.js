@@ -3,6 +3,7 @@ var args = arguments[0] || {};
 /*
  * Initialisation functions - only executed once
  * 
+ * 
  * init
  * addEventListeners
  */
@@ -60,7 +61,9 @@ function addEventListeners() {
 /*
  * Main functions
  * 
+ * 
  * closeFullDreemView
+ * 
  * setData
  */
 
@@ -71,6 +74,7 @@ function closeFullDreemView() {
     
     $.containerView.animate({ left : Alloy.Globals.deviceMeasurements.width , right : Alloy.Globals.deviceMeasurements.minusWidth , duration : 600 } , args.closeFullDreemView );
 }
+
 
 // TODO: change these for the real details
 function setData() {

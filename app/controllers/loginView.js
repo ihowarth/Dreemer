@@ -3,6 +3,7 @@ var args = arguments[0] || {};
 /*
  * Initialisation functions - only executed once
  * 
+ * 
  * init
  * addEventListeners
  */
@@ -10,7 +11,7 @@ var args = arguments[0] || {};
 (function init() {
     // If the mainWin isn't open; open it, else; animate the loginView in
     if ( args.isWinOpen == true ) {
-		$.containerView.animate({ opacity : 1 , duration : 600 });    	
+		$.containerView.animate({ left : 0 , right : 0 , duration : 400 });    	
     }
     
     addEventListeners();   
@@ -24,7 +25,7 @@ function addEventListeners() {
     
     $.containerView.addEventListener( "swipe" , function( e ) {
         if ( e.direction == "left" ) {
-            $.containerView.animate({ opacity  : 0, duration : 600 } , args.closeLoginView );
+            $.containerView.animate({ left : Alloy.Globals.deviceMeasurements.minusWidth, right : Alloy.Globals.deviceMeasurements.width, duration : 400 } , args.closeLoginView );
         }  
     });
 }
@@ -32,11 +33,15 @@ function addEventListeners() {
 
 /*
  * Exported functions
+ * 
+ * 
+ * setViewOffscreen
  */
 
 // Used to set the opacity before adding it to the mainWin, so we can fade in nicely
-function setViewOpacity0() {
-	$.containerView.opacity = 0;
+function setViewOffscreen() {
+	$.containerView.left = Alloy.Globals.deviceMeasurements.minusWidth;
+	$.containerView.right = Alloy.Globals.deviceMeasurements.width;
 }
 
-exports.setViewOpacity0 = setViewOpacity0;
+exports.setViewOffscreen = setViewOffscreen;

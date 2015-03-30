@@ -3,7 +3,7 @@
 		<View id="navBarView">
 			<ImageView id="profileButton"/>
 			<Label id="titleLabel"/>
-			<ImageView id="postButton"/>
+			<ImageView id="composeButton"/>
 		</View>
 		<TableView id="dreemsTable"/>
 	</Window>

@@ -69,14 +69,15 @@ function addEventListeners() {
 	            closeProfileView   : function() {
 	                $.mainWin.remove( profileView );
 	                APP.releaseAllMemoryOfView( profileView );
-	            }
+	            },
+	            mainWin : $.mainWin
 	        }).getView();
 	            
 	        $.mainWin.add( profileView );
         }
     });
     
-    $.postButton.addEventListener( "click" , function() {
+    $.composeButton.addEventListener( "click" , function() {
         // If the user is logged in; open the postView, else; do something else 
         // TODO : APP.loggedIn
         if ( true ) {
@@ -101,6 +102,7 @@ function addEventListeners() {
 /*
  * Main functions
  * 
+ * 
  * openLoginView
  */
 
@@ -116,10 +118,10 @@ function openLoginView() {
     
     var loginView = loginController.getView();
     
-    // Used to set the opacity to 0, so we can fade in nicely. This is necessary becasue 
-    // we need the opacity to be 1 normally, so we don't get a flicker if the login page is opened first
+    // Used to set the view off screen, so we can slide it in nicely. This is necessary becasue 
+    // we need the view to be centered normally, so we can see it if the login page is opened first
     if ( isWinOpen == true ) {
-    	loginController.setViewOpacity0();
+    	loginController.setViewOffscreen();
     }
     
     // Added separately using a variable so I can also use that reference to remove the view
@@ -131,7 +133,7 @@ function openLoginView() {
 }
 
 
-
+//TODO: Add one fake dreem to the top of the list, showing the user how to find random dreems
 
 /*
  * Temp test functions

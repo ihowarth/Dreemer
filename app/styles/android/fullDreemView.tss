@@ -11,7 +11,7 @@
 	textAlign : Ti.UI.TEXT_ALIGNMENT_LEFT,
 },
 
-"#dreemContainer" : {
+"#dreemContainerScrollView" : {
 	top    	     : 0,
 	bottom 	     : 70,
     left         : 15,
@@ -90,10 +90,13 @@
 },
 
 "#bottomBarView" : {
-	bottom			: 0,
-	height 			: 70,
-	backgroundColor : "#eee"
+	bottom : 0,
+	height : 90
 },
+"#coloredBarView" : {
+	top 			: 20,
+	backgroundColor : "#eee"
+},	
 "#twitterDetailsContainer" : {
 	left   : 15,
 	width  : Ti.UI.SIZE,
@@ -132,22 +135,24 @@
 	color 		 : "#444"
 },
 "#endorseContainer" : {
-	right  : 15,
+	top    : 0,
+	right  : 20,
 	height : Ti.UI.SIZE,
 	width  : Ti.UI.SIZE,
 	layout : "vertical"
 },
 "#endorseButton" : {
 	touchEnabled : false,
-	width : 30,
-	height : 30,
+	width  		 : 40,
+	height 		 : 40,
 	backgroundColor : "#0000ff"
 },
 "#endorseLabel" : {
+	top			 : 5,
 	touchEnabled : false,
 	font 		 : {
 		fontSize : 13
 	},
 	color		 : "#000",
-	text 		 : "endorse dreem"
+	text 		 : "endorse"
 }

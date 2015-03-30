@@ -78,11 +78,14 @@ function setData() {
     
     $.amountOfEndorsersLabel.text = " 100 Dreemers endorse this";
     
+    // Always set an extra 2 lines of white space after the Dreem details because 
+    // the overhanging 'endorseButton' can cover up some text otherwise
     $.fullDreemLabel.text = "Imagine an app that could allow you to post the dreems you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!\n\n" +
                             "Imagine an app that could allow you to post the dreems you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!\n\n" + 
                             "Imagine an app that could allow you to post the dreems you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!\n\n" +
                             "Imagine an app that could allow you to post the dreems you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!\n\n" +
-                            "Imagine an app that could allow you to post the dreems you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!";
+                            "Imagine an app that could allow you to post the dreems you have for all the world to see.\nIt would be a great way to share ideas and get feedback from everyone around the world, instant gratification, instant karma!"
+                            +"\n\n";
     
     // $.twitterIcon.image      = ;
     $.twitterHandleLabel.text   = "@davidzendoval";

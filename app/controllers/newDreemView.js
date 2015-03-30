@@ -102,8 +102,8 @@ function closeNewDreemView() {
 
 // Checks to see if both text fields have valid data and allows the 
 function checkIfPostable() {
-    if ( $.dreamTitleTextArea.value != "" && $.dreamTitleTextArea.value != "Dreem title..." &&
-         $.dreamDetailsTextArea.value != "" && $.dreamDetailsTextArea.value != "What is your dreem about?" ) {
+    if ( $.dreamTitleTextArea.value != ""   && $.dreamTitleTextArea.value != "Dreem title..."              && $.dreamTitleTextArea.value.length > 15 &&
+         $.dreamDetailsTextArea.value != "" && $.dreamDetailsTextArea.value != "What is your dreem about?" && $.dreamDetailsTextArea.value.length > 50 ) {
              
         postValid = true;     
         

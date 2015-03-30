@@ -24,7 +24,10 @@
 	            </Labels>
 	        </TabbedBar>
 	        
-	        
+	        <View id="dreemsControlContainerView" platform="android">
+	        	<Label id="myDreemsControlLabel"/>
+	        	<Label id="endorsedControlLabel"/>
+	        </View>
         
 	    </View>
 	    <View id="resultsContainerView">

@@ -101,9 +101,10 @@
 
 "#resultsContainerView" : {},
 "#noResultsContainerView" : {
-	height : Ti.UI.SIZE,
-	width  : Ti.UI.SIZE,
-	layout : "vertical"
+	height  : Ti.UI.SIZE,
+	width   : Ti.UI.SIZE,
+	layout  : "vertical",
+	visible : false
 },
 "#noResultsImageView" : {
 	width  			: 40,
@@ -117,14 +118,13 @@
 	},	
 	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
 	color     : "#aaa",
-	text      : "You haven't shared any\ndreems yet"
 },
 "#myDreemsTable" : {
 	top 			: 264,
 	height			: Ti.UI.SIZE,
 	separatorColor  : "#4a4a50",
 	backgroundColor : "#fff",
-	visible			: false
+	visible			: true
 },
 "#endorsedDreemsTable" : {
 	top 			: 264,

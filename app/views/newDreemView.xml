@@ -10,9 +10,11 @@
 			<View id="separatorLine"/>
 			<TextArea id="dreamDetailsTextArea"/>
 		</ScrollView>
-		<View id="infoView">
-			<ImageView id="infoImageView"/>
-			<Label id="infoWhatLabel"/>
+		<View id="infoContainerView">
+			<View id="infoTopContainerView">
+				<ImageView id="infoImageView"/>
+				<Label id="infoWhatLabel"/>
+			</View>
 			<Label id="infoRestLabel"/>
 		</View>
 		<View id="postButtonView">

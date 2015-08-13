@@ -33,8 +33,22 @@
 },
 
 
-"#dreemsTable" : {	
-	top    						: 44,	
+"#mainScrollableView" : {
+	top         : 44,
+	bottom 	    : 0,
+	left   		: 0,
+	right  		: 0,
+	currentPage : 1
+},
+
+"#randomDreemsView" : {
+	bottom 			: 0,
+	left   			: 0,
+	right  			: 0,
+	backgroundColor : "#fff000"
+},
+
+"#dreemsTable" : {		
 	bottom 						: 0,
 	left   						: 0,
 	right  						: 0,

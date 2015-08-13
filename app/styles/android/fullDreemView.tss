@@ -71,7 +71,7 @@
 		fontSize : 11
 	},
 	color 		 : "#aaa",
-	text		 : " Flag as innapropriate"
+	text		 : " Flag as inappropriate"
 },
 
 "#separatorLine" : {

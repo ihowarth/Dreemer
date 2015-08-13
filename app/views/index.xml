@@ -5,6 +5,9 @@
 			<Label id="titleLabel"/>
 			<ImageView id="composeButton"/>
 		</View>
-		<TableView id="dreemsTable"/>
+		<ScrollableView id="mainScrollableView">
+			<View id="randomDreemsView"/>					
+			<TableView id="dreemsTable"/>
+		</ScrollableView>
 	</Window>
 </Alloy>
